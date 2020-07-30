@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+   {% load static %}
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Taxa Adventure</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static  "trek/css/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "trek/vendors/linericon/style.css" %}">
+	<link rel="stylesheet" href="{% static "trek/css/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "trek/css/magnific-popup.css" %}">
+	<link rel="stylesheet" href="{% static  "trek/vendors/owl-carousel/owl.carousel.min.css" %}">
+	<link rel="stylesheet" href="{% static "trek/vendors/nice-select/css/nice-select.css" %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static "trek/css/style.css" %}">
+</head>
+
+<body>
+
+    <!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="{% static "trek/img/a1111.png" %}" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="{% url 'trek:home' %}">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:packk' %}">Packages</a></li>
+
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:packk' %}">Pilgrimage</a></li>
+								<ul class="dropdown-menu">
+
+									<li class="nav-item"><a class="nav-link" href="{% url 'trek:book' %}">Book trip</a></li>
+
+								</ul>
+
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:book' %}">book</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/admin">ADMIN</a></li>
+
+						</ul>
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item">
+								<a href="#" class="primary-btn">Book a trip</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+
+		</div>
+	</header>
+
+	<!--================ End Header Menu Area =================-->
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area ">
+		<div class="banner_inner overlay d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content">
+					<div class="page_link">
+						<a href="index.html">Home</a>
+						<a href="packages.html">Packages</a>
+					</div>
+					<h2>Trip Packages</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================ Start Trip Package Area =================-->
+	<section class="package-area section_gap_top">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="ol-lg-12">
+					<div class="main_title">
+						<p>We’re Offering these Trip Packages</p>
+						<h1>Famous Trips Packages</h1>
+						<span class="title-widget-bg"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="single-package">
+						<div class="thumb">
+							<img class="img-fluid" src="{%  static "trek/img/blog/D111.jpg" %}" alt="">
+						</div>
+
+						<div class="meta-top d-flex">
+							<p><span class="fa fa-location-arrow"></span> UTTARAKHAND</p>
+							<p class="ml-20"><span class="fa fa-calendar"></span> 5 days </p>
+						</div>
+						<h4>KEDARKANTHA <br>
+								</h4>
+						<p>
+							Considered amongst the best treks within the country, the Kedarkantha trek have risen into the most loved expedition ...
+						</p>
+						<a href="{% url "trek:blog1" %}" class="primary-btn">Read More</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-package">
+						<div class="thumb">
+							<img class="img-fluid" src="{% static "trek/img/package/p2.jpg" %}" alt="">
+						</div>
+
+						<div class="meta-top d-flex">
+							<p><span class="fa fa-location-arrow"></span> UTTARAKHAND</p>
+							<p class="ml-20"><span class="fa fa-calendar"></span> 5 days 6 nights</p>
+						</div>
+						<h4>DEVKYARA<br>
+								</h4>
+						<p>
+							Dev Kyara at 4100M lies between the Rupin and Supin valleys in Uttarakhand
+						</p>
+						<a href="{% url "trek:blog3" %}" class="primary-btn">Read More</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-package">
+						<div class="thumb">
+							<img class="img-fluid" src="{% static "trek/img/package/p3.jpg" %}" alt="">
+						</div>
+
+						<div class="meta-top d-flex">
+							<p><span class="fa fa-location-arrow"></span> UTTARAKHAND</p>
+							<p class="ml-20"><span class="fa fa-calendar"></span> 5 days 6 nights</p>
+						</div>
+						<h4>Chopta/tungnath</h4>
+						<p>
+						Chopta is a small region of meadows and evergreen forest area which is a part of kedarnath
+											</p>
+						<a href="{% url "trek:blog2" %}" class="primary-btn">Read More</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6">
+					<div class="single-package">
+						<div class="thumb">
+							<img class="img-fluid" src="{% static "trek/img/package/p3.jpg" %}" alt="">
+						</div>
+
+						<div class="meta-top d-flex">
+							<p><span class="fa fa-location-arrow"></span> UTTARAKHAND</p>
+							<p class="ml-20"><span class="fa fa-calendar"></span> 5 days 6 nights</p>
+						</div>
+						<h4>HAR KI DOON<br>
+								</h4>
+						<p>
+							Har Ki Doon Valley is a cradle-shaped hanging valley in the Garhwal Himalayas.
+						</p>
+						<a href="{% url "trek:blog4" %}" class="primary-btn">Read More</a>
+					</div>
+				</div>
+                <div class="col-lg-4 col-md-6">
+					<div class="single-package">
+						<div class="thumb">
+							<img class="img-fluid" src="{% static "trek/img/package/p3.jpg" %}" alt="">
+						</div>
+
+						<div class="meta-top d-flex">
+							<p><span class="fa fa-location-arrow"></span> HIMANCHAL PRADESH</p>
+							<p class="ml-20"><span class="fa fa-calendar"></span> 5 days 6 nights</p>
+						</div>
+						<h4>Prashar Lake ,<br>
+								 </h4>
+						<p>
+							The lake is located at a height of 2730 m above sea level. With deep blue waters, the lake is held sacred to the sage Prashar and he is regarded to have meditated there.
+						</p>
+						<a href="{% url "trek:blog5" %}" class="primary-btn">Read More</a>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</section>
+	<!--================ End Trip Package Area =================-->
+
+	<!--================ Start Popular Places Area =================-->
+	<section class="popular-places-area section_gap_bottom">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<p>We’re Offering these Trip Packages</p>
+						<h1>Popular Places Around the World</h1>
+						<span class="title-widget-bg"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popular-places-slider owl-carousel">
+			<div class="single-popular-places">
+				<div class="popular-places-img">
+					<img src="{% static "trek/img/places/p1.jpg" %}" alt="">
+				</div>
+				<div class="popular-places-text">
+					<a href="single-blog.html">
+					</a>
+					<p>Proper Guided Tour</p>
+					<h4>
+						pack1
+					</h4>
+				</div>
+			</div>
+			<div class="single-popular-places">
+				<div class="popular-places-img">
+					<img src="{% static "trek/img/places/p2.jpg" %}" alt="">
+				</div>
+				<div class="popular-places-text">
+					<a href="single-blog.html">
+					</a>
+					<p>Proper Guided Tour</p>
+					<h4>
+						Santorini Island Dream Holiday
+						and Fun package
+					</h4>
+				</div>
+			</div>
+			<div class="single-popular-places">
+				<div class="popular-places-img">
+					<img src="{%  static "trek/img/places/p3.jpg" %}" alt="">
+				</div>
+				<div class="popular-places-text">
+					<a href="single-blog.html">
+					</a>
+					<p>Proper Guided Tour</p>
+					<h4>
+						Santorini Island Dream Holiday
+						and Fun package
+					</h4>
+				</div>
+			</div>
+			<div class="single-popular-places">
+				<div class="popular-places-img">
+					<img src="{%  static "trek/img/places/p4.jpg" %}" alt="">
+				</div>
+				<div class="popular-places-text">
+					<a href="single-blog.html">
+					</a>
+					<p>Proper Guided Tour</p>
+					<h4>
+						Santorini Island Dream Holiday
+						and Fun package
+					</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Popular Places Area =================-->
+
+
+
+	<!--================ End CTA Area =================-->
+	
+    <!--================  start footer Area =================-->
+	<footer class="footer-area">
+		<div class="footer_top section_gap_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5 class="footer_title">About Agency</h5>
+							<p class="about-text">The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point where images and videos are used more to </p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6">
+
+					</div>
+
+					<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget mail-chimp">
+							<h5 class="mb-20">Instragram Feed</h5>
+							<ul class="instafeed d-flex flex-wrap">
+								<li><img src="{% static "trek/img/i1.jpg" %}" alt=""></li>
+								<li><img src="{% static "trek/img/i2.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i3.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i4.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i5.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i6.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i7.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i8.jpg" %}"  alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+					</div>
+					<div class="col-lg-6 col-md-12 text-right">
+						<div class="social-icons">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="{% static "trek/js/jquery-3.2.1.min.js" %}"></script>
+	<script src="{%  static  "trek/js/popper.js" %}"></script>
+	<script src="{%static   "trek/js/bootstrap.min.js" %}"></script>
+	<script src="{% static  "trek/js/stellar.js" %}"></script>
+	<script src="{% static "trek/js/jquery.magnific-popup.min.js" %}"></script>
+	<script src="{% static "trek/vendors/nice-select/js/jquery.nice-select.min.js" %}"></script>
+	<script src="{% static "trek/vendors/owl-carousel/owl.carousel.min.js" %}"></script>
+	<script src="{% static "trek/js/owl-carousel-thumb.min.js" %}"></script>
+	<script src="{% static "trek/js/jquery.ajaxchimp.min.js" %}"></script>
+	<script src="{% static "trek/js/mail-script.js" %}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{% static "trek/js/gmaps.min.js" %}"></script>
+	<script src="{%  static "trek/js/theme.js" %}"></script>
+</body>
+
+</html>

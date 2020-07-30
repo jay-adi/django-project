@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>final</title>
+     {% load static %}
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Taxa Adventure</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static  "trek/css/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "trek/vendors/linericon/style.css" %}">
+	<link rel="stylesheet" href="{% static "trek/css/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "trek/css/magnific-popup.css" %}">
+	<link rel="stylesheet" href="{% static  "trek/vendors/owl-carousel/owl.carousel.min.css" %}">
+	<link rel="stylesheet" href="{% static "trek/vendors/nice-select/css/nice-select.css" %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static "trek/css/style.css" %}">
+</head>
+
+
+
+	<!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="{% static "trek/img/a1111.png" %}" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="{% url 'trek:home' %}">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:packk' %}">Packages</a></li>
+
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:packk' %}">Pilgrimage</a></li>
+								<ul class="dropdown-menu">
+
+									<li class="nav-item"><a class="nav-link" href="{% url 'trek:book' %}">Book trip</a></li>
+
+								</ul>
+
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:book' %}">book</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/admin">ADMIN</a></li>
+
+						</ul>
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item">
+								<a href="#" class="primary-btn">Book a trip</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+
+		</div>
+	</header>
+
+
+<section class="banner_area ">
+		<div class="banner_inner overlay d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content" style="width: 800px">
+                    <div style="width: 300px;float:left;">
+
+					<h3><br/><br/><br/> BOOK YOUR TREK FOR Rs {{ a }}<br/><br/><br><br/><br/>  </h3>
+                    <ul class="nav navbar-nav ml-auto">
+							<li class="nav-item">
+                                <button type="button"><a href="#" class="primary-btn"><b>CLICK HERE FOR ONLINE BANKING</b></a></button>
+							</li>
+
+						</ul>
+                        </div>
+                    <div style="width: 50px;float:right;">
+                        <h6>PROVISIONAL RECEIPT</h6>
+                 <form method="post">
+{% csrf_token %}
+
+
+<div class="form-group">
+{{ form.as_table}}
+</div>
+
+
+
+
+
+
+
+
+<input class="btn btn-primary" type="submit" value="SUBMIT"/>
+
+</form>
+                    </div>
+                    </div>
+                    </div>>
+        </div>
+	</section>
+<footer class="footer-area">
+		<div class="footer_top section_gap_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5 class="footer_title">About Agency</h5>
+							<p class="about-text">The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point where images and videos are used more to </p>
+						</div>
+					</div>
+					<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5 class="footer_title">Navigation Links</h5>
+							<div class="row">
+								<div class="col-5">
+									<ul class="list">
+										<li><a href="#">Home</a></li>
+
+									</ul>
+								</div>
+								<div class="align-content-lg-end">
+									<ul class="list">
+										<li><a href="#">Team</a></li>
+										<li><a href="#">Pricing</a></li>
+
+										<li><a href="#">contact</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget mail-chimp">
+							<h5 class="mb-20">Instragram Feed</h5>
+							<ul class="instafeed d-flex flex-wrap">
+								<li><img src="{% static "trek/img/i1.jpg" %}" alt=""></li>
+								<li><img src="{% static "trek/img/i2.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i3.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i4.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i5.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i6.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i7.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i8.jpg" %}"  alt=""></li>
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+					</div>
+					<div class="col-lg-6 col-md-12 text-right">
+						<div class="social-icons">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</html>

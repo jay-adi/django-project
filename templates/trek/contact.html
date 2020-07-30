@@ -1,0 +1,282 @@
+<!doctype html>
+<html >
+
+<head>
+    {% load static %}
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Contact Us</title>
+	<!-- Bootstrap CSS -->
+	<<link rel="stylesheet" href="{% static  "trek/css/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "trek/vendors/linericon/style.css" %}">
+	<link rel="stylesheet" href="{% static "trek/css/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "trek/css/magnific-popup.css" %}">
+	<link rel="stylesheet" href="{% static  "trek/vendors/owl-carousel/owl.carousel.min.css" %}">
+	<link rel="stylesheet" href="{% static "trek/vendors/nice-select/css/nice-select.css" %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static "trek/css/style.css" %}">
+    <style>
+        /* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-251{
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-751 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-251, .col-751, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+        </style>
+</head>
+
+
+<body>
+
+	<!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="{% static "trek/img/a1111.png" %}" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="{% url 'trek:home' %}">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:packk' %}">Packages</a></li>
+
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:packk' %}">Pilgrimage</a></li>
+								<ul class="dropdown-menu">
+
+									<li class="nav-item"><a class="nav-link" href="{% url 'trek:book' %}">Book trip</a></li>
+
+								</ul>
+
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'trek:book' %}">book</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/admin">ADMIN</a></li>
+
+						</ul>
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item">
+								<a href="#" class="primary-btn">Book a trip</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+
+		</div>
+	</header>
+
+	<!--================ End Header Menu Area =================-->
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area ">
+		<div class="banner_inner overlay d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content">
+
+					<h2>BOOK YOUR TREK</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+<div class="container">
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+
+
+{{ form.as_p }}
+
+
+
+
+
+
+
+<input class="btn btn-primary" type="submit" value="SUBMIT"/>
+
+</form>
+    </div>
+
+	<!--================  start footer Area =================-->
+	<footer class="footer-area">
+		<div class="footer_top section_gap_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5 class="footer_title">About Agency</h5>
+							<p class="about-text">CLIFFCAT is one of the prominent trekking agency in uttarakhand ,having a wonderful trekk record  </p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6">
+
+					</div>
+
+					   <div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget mail-chimp">
+							<h5 class="mb-20">Instragram Feed</h5>
+							<ul class="instafeed d-flex flex-wrap">
+								<li><img src="{% static "trek/img/i1.jpg" %}" alt=""></li>
+								<li><img src="{% static "trek/img/i2.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i3.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i4.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i5.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i6.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i7.jpg" %}"  alt=""></li>
+								<li><img src="{% static "trek/img/i8.jpg" %}"  alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+					</div>
+					<div class="col-lg-6 col-md-12 text-right">
+						<div class="social-icons">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area =================-->
+
+	<!--================Contact Success and Error message Area =================-->
+	<div id="success" class="modal modal-message fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-close"></i>
+					</button>
+					<h2>Thank you</h2>
+					<p>Your message is successfully sent...</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modals error -->
+
+	<div id="error" class="modal modal-message fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-close"></i>
+					</button>
+					<h2>Sorry !</h2>
+					<p> Something went wrong </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Contact Success and Error message Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static "trek/js/jquery-3.2.1.min.js" %}"></script>
+	<script src="{%  static  "trek/js/popper.js" %}"></script>
+	<script src="{%static   "trek/js/bootstrap.min.js" %}"></script>
+	<script src="{% static  "trek/js/stellar.js" %}"></script>
+	<script src="{% static "trek/js/jquery.magnific-popup.min.js" %}"></script>
+	<script src="{% static "trek/vendors/nice-select/js/jquery.nice-select.min.js" %}"></script>
+	<script src="{% static "trek/vendors/owl-carousel/owl.carousel.min.js" %}"></script>
+	<script src="{% static "trek/js/owl-carousel-thumb.min.js" %}"></script>
+	<script src="{% static "trek/js/jquery.ajaxchimp.min.js" %}"></script>
+	<script src="{% static "trek/js/mail-script.js" %}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{% static "trek/js/gmaps.min.js" %}"></script>
+	<script src="{%  static "trek/js/theme.js" %}"></script>
+</body>
+
+</html>
