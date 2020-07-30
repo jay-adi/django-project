@@ -7,13 +7,13 @@ def maiil(aaa):
   s.starttls()
 
 
-  s.login("vipul98saklani@gmail.com", "@UK07ax0643")
+  s.login("email", "password")
 
 
   message = aaa
 
 # sending the mail
-  s.sendmail("vipul98saklani@gmail.com", "vipul.cse17@nituk.ac.in", message)
+  s.sendmail("email", "sender", message)
 
 # terminating the session
   s.quit()
